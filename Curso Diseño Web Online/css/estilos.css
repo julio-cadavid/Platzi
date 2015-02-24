@@ -1,0 +1,43 @@
+/*
+* Primero se aplica los estilos a los elementos mas generales
+y luego a los mas especificos
+* En el body, se debe declar siempre la fuente en px (Ya luego puedo hacerlo en em)
+
+
+*Una caja es cualquier objeto en html, que envuelva a otro y que le permita tener
+margenes y permita flotar
+
++inline: Texto se mezcla con la imagen
++Block: No pueden tener nada encima. Tddo lo que tengo en frente, cae abajo
++Inline-block permite que los bloques tengan margenes y tener cosas al lado pegadas
++ 1em=una letra M (Esto deben de como haya declarado la fuente en el body, para
+este caso, el em toda el valor de 19px)
+*/
+
+a{
+  color:#22bce0;
+}
+body{
+  background: #eee;
+  font-family: arial;
+  font-size: 16px;
+}
+header{
+  background: #343b5a;
+  color: #fff;
+  padding: 0.5em;
+}
+header figure{
+  float: left;
+}
+header h1{
+  font-size: 1.2em;
+  font-weight: normal;
+}
+header #avatar img{
+  border-radius: 50%; /*Al dar radio a la mita del ancho queda toda en circulo*/
+  width: 55px;
+}
+header #logo img{
+  width: 52px;
+}
