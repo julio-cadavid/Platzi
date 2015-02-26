@@ -12,32 +12,240 @@ margenes y permita flotar
 +Inline-block permite que los bloques tengan margenes y tener cosas al lado pegadas
 + 1em=una letra M (Esto deben de como haya declarado la fuente en el body, para
 este caso, el em toda el valor de 19px)
++Diseñar todo en em o % para que todos los valores se pueda ajustar con solo cambiar
+el valor de la fuente en el body.
++ Un LI es una caja por defecto
 */
+
+
+
+QUEDE FALTANDO 24 MINUTOS DE VIDEO
+
+
+
 
 a{
   color:#22bce0;
 }
-body{
+body
+{
   background: #eee;
   font-family: arial;
   font-size: 16px;
 }
-header{
-  background: #343b5a;
-  color: #fff;
-  padding: 0.5em;
+footer
+{
+  color: rgba(255,255,255,0.7);
+  background:#22bce0;
+  text-align: center;
+  padding: 1.5em;
+  
 }
-header figure{
+
+footer p:first-child{ /*PSEUDOCLASE hace que la eqtiqueta <p> se convierta en padre 
+(representa cualquier elemento que sea el primer elemento hijo del elemento padre.)*/
+  margin-bottom: 0;
+ 
+}
+
+footer p:last-child{ /*PSEUDOCLASE representa cualquier elemento que es el 
+  último hijo de un elemento padre.*/
+  margin-top: 0;
+
+}
+
+footer p:last-child:before{ /*Guiones de Mejorando.la*/
+  content:"-"
+}
+footer p:last-child:after{ /*Guiones de Mejorando.la*/
+  content:"-"
+}
+
+header
+{
+  background: #344B54;
+  color: #fff;
+  overflow: hidden; /*Permite que como dentre en el head*/
+  padding: 0.5em;
+  position: relative;
+}
+header figure
+{
   float: left;
 }
-header h1{
+header h1
+{
   font-size: 1.2em;
   font-weight: normal;
+  margin: 0.2em 70px 0 0;
 }
-header #avatar img{
+header #avatar
+{
+  margin: 0.5em 0.5em 0 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+}
+header #avatar img
+{
   border-radius: 50%; /*Al dar radio a la mita del ancho queda toda en circulo*/
   width: 55px;
 }
-header #logo img{
+header #logo img
+{
+  border-right: 1px solid white; /*Creo la raya blanca al lado del logo*/
+  margin-right: 0.5em;
+  padding-right: 0.5em;
   width: 52px;
 }
+ 
+nav
+{
+  background: #80bca3;
+  padding: 0 0.5em;
+  position: relative;
+}
+
+nav ul
+{
+  list-style: none; /*Quita los puntos de la lista*/
+  margin: 0;
+  padding: 0;
+}
+
+nav ul #publicar_nav
+{
+
+  position: absolute;
+  right: 0;
+  top: -0.4em;
+}
+
+nav ul #publicar_nav a
+{
+  background: #22bce0;
+  border-radius: 5px;
+  box-shadow: rgba(0,0,0,0.5) 5px 5px 20px; /*Sombra para la caja del boton azul*/
+  font-style: italic;
+  padding: 0.8em 0.5em;
+  text-decoration: none; /*Quita el subrayado del enlace*/
+  text-shadow:rgba(0,0,0,0.5) 2px 2px 5px; /*Sombra para el texto del boton azul*/
+}
+
+nav ul li
+{
+  display: inline-block; /*Las cajas (cada nombre) queda en posicion horizontal*/
+  margin: 0 1em 0 0;
+}
+
+nav ul li a
+{
+  color: #fff;
+  display: block;
+  padding: 0.5em 0; /*Se pone para que toda el area de a quede clickeable*/
+}
+
+
+
+#contenido{
+  margin: 1em;
+}
+
+#contenido .item{
+  background: #fff;
+  border-bottom: 3px solid #22bce0;
+  margin-bottom: 3em;
+  min-height: 128px; /*Altura minima para que la imagen no desborde del item*/
+  position: relative;
+}
+
+#contenido .item .autor_item
+{
+  color: #aaa;
+}
+
+#contenido .item .datos_item
+{
+  margin: 1em 1em 0 0;
+  text-align: right;
+}
+
+#contenido .item .datos_item .fecha_item
+{
+  color: #aaa;
+}
+
+#contenido .item .datos_item .tag_item
+{
+  background: #f4502a;
+  border-radius: 0.5em;
+  color: #fff;
+  display: inline-block;
+  float: left;
+  padding: 0.2em 0.5em;
+  text-decoration: none;
+
+}
+
+#contenido .item .titulo
+{
+  font-size: 1.2em;
+  font-style: italic;
+  padding-top:1em; 
+}
+#contenido .item .titulo a
+{
+  color: #444;
+  text-decoration: none;
+}
+
+#contenido .item .imagen_item img{
+  float: left; /*Imagen este siempre a la izquierda*/
+  margin: 0 15px 0 0;
+}
+
+#contenido .item .imagen_item img{
+  width: 96px; /*Reduciendo la imagen a la mitad para visualizar en retina*/
+
+}
+
+#contenido .item .votacion
+{
+  background: #fff;
+  border-radius: 0 0 0.5em 0.5em;
+  left: 5%;
+  margin-top: 3px;
+  padding: 0.2em 0.5em;
+  position: absolute;
+  top: 100%;
+  width: 90%;
+}
+#contenido .item .votacion .comentarios_item,
+#contenido .item .votacion .guardar_item
+{
+  float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
