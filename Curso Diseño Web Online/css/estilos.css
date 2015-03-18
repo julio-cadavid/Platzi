@@ -44,6 +44,7 @@ footer
 
 footer p:first-child{ /*PSEUDOCLASE hace que la eqtiqueta <p> se convierta en padre 
 (representa cualquier elemento que sea el primer elemento hijo del elemento padre.)*/
+  color:#fff;
   margin-bottom: 0;
  
 }
