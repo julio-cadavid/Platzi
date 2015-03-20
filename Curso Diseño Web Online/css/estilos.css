@@ -46,23 +46,36 @@ el valor de la fuente en el body.
 }
 
 .icon-estrella:before {
-  content: "\f005";
+  content: "\f005"; 
+  color: #ffbe2c;
+  margin-right: 0.4em;
+  position: relative;
+  top: 0.1em 
+
 }
 
 .icon-lapiz:before {
   content: "\f040";
+  margin-right: 0.3em;
+
+
 }
 
 .icon-comentarios:before {
   content: "\f086";
+
 }
 
 .icon-flecha-abajo:before {
   content: "\f0d7";
+  color: #dd4f24;
+
 }
 
 .icon-flecha-arriba:before {
   content: "\f0d8";
+  color: #22bce0;
+
 }
 
 /*Fin declaracion ICOFONTS*/
@@ -149,7 +162,7 @@ header #logo img
 nav
 {
   background: #80bca3;
-  padding: 0 0.5em;
+  padding: 0 6em 0 0;
   position: relative;
 }
 
@@ -165,7 +178,8 @@ nav ul #publicar_nav
 
   position: absolute;
   right: 0;
-  top: -0.4em;
+  top: -0.2em;
+  
 }
 
 nav ul #publicar_nav a
@@ -174,7 +188,7 @@ nav ul #publicar_nav a
   border-radius: 5px;
   box-shadow: rgba(0,0,0,0.5) 5px 5px 20px; /*Sombra para la caja del boton azul*/
   font-style: italic;
-  padding: 0.8em 0.5em;
+  padding: 0.9em 0.5em;
   text-decoration: none; /*Quita el subrayado del enlace*/
   text-shadow:rgba(0,0,0,0.5) 2px 2px 5px; /*Sombra para el texto del boton azul*/
 }
@@ -192,7 +206,12 @@ nav ul li a
   padding: 0.5em 0; /*Se pone para que toda el area de a quede clickeable*/
 }
 
-
+aside{ /*Seccion naranja dentro del aside. Se visualiza despues de 1000px al lado derecho*/
+  width: 320px;
+  height: 240px;
+  background: orange;
+  display: none;
+}
 
 #contenido{
   margin: 1em;
@@ -260,12 +279,16 @@ nav ul li a
 {
   background: #fff;
   border-radius: 0 0 0.5em 0.5em;
-  left: 5%;
+  left: 4%;
   margin-top: 3px;
   padding: 0.2em 0.5em;
   position: absolute;
   top: 100%;
   width: 90%;
+
+}
+#contenido .item .votacion a{
+  text-decoration: none;
 }
 #contenido .item .votacion .comentarios_item,
 #contenido .item .votacion .guardar_item
@@ -273,6 +296,31 @@ nav ul li a
   float: right;
 }
 
+@media screen and (min-width: 800px){
+  #contenido{
+    overflow: hidden; /*Lo aplico porque a la clase de abajo un float:Left*/
+  }
+  #contenido .item { /*Pongo el elemento a 2 columnas*/
+    width: 49%;
+    float: left;
+    
+  }
+  
+  #contenido .item:nth-child(odd){ /*Doy un margen para separ los contenedores*/
+      margin-right: 2%;
+    }
+
+}
+
+@media screen and (min-width: 1000px){
+  aside{
+    display: block;
+    margin: 1em;
+    float: right;
+    width: 20%;
+  }
+
+}
 
 
 
